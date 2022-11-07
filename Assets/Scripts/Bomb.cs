@@ -26,7 +26,7 @@ public class Bomb : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         spawner = FindObjectOfType<Spawner>();
         manager = FindObjectOfType<UIManager>();
-        mr = GetComponent<MeshRenderer>();
+        //mr = GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
