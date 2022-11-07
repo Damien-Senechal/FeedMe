@@ -28,7 +28,7 @@ public class UIManager : MonoBehaviour
             {
                 PlayerPrefs.SetInt("BestScore", score);
             }
-            SceneManager.LoadScene("Level");
+            SceneManager.LoadScene(0);
         }
     }
 
@@ -49,6 +49,6 @@ public class UIManager : MonoBehaviour
 
     public void returnMenu()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(0);
     }
 }

@@ -13,6 +13,7 @@ public class Bomb : MonoBehaviour
     private int spawnNumber = -1;
     private float timer = 1.25f;
     private bool isActive = false;
+    public GameObject explosion;
 
     public Spawner spawner;
     public UIManager manager;
@@ -68,6 +69,7 @@ public class Bomb : MonoBehaviour
     {
         if (collision.gameObject.tag == "CAT")
         {
+            Instantiate(explosion);
             //Debug.Log("MES GROSSES COUILLES");
             if (manager.getScore() > PlayerPrefs.GetInt("BestScore"))
             {
