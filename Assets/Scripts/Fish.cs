@@ -42,7 +42,7 @@ public class Fish : MonoBehaviour
         torque.y = Random.Range(-200, 200);
         torque.z = Random.Range(-200, 200);
         GetComponent<ConstantForce>().torque = torque;
-        rb.AddForce(new Vector3(0, 6, 1 * speed), ForceMode.Impulse);
+        rb.AddForce(new Vector3(0, 5, 1 * speed), ForceMode.Impulse);
         spawner.isActive[spawnNumber] = false;
     }
 

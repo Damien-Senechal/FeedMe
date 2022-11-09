@@ -44,7 +44,7 @@ public class Bomb : MonoBehaviour
     private void OnMouseDown()
     {
         isActive = true;
-        rb.AddForce(new Vector3(0, 6, 1 * speed), ForceMode.Impulse);
+        rb.AddForce(new Vector3(0, 5, 1 * speed), ForceMode.Impulse);
         spawner.isActive[spawnNumber] = false;
     }
 
@@ -70,12 +70,15 @@ public class Bomb : MonoBehaviour
         if (collision.gameObject.tag == "CAT")
         {
             Instantiate(explosion, transform.position, Quaternion.identity);
+            
             //Debug.Log("MES GROSSES COUILLES");
             if (manager.getScore() > PlayerPrefs.GetInt("BestScore"))
             {
                 PlayerPrefs.SetInt("BestScore", manager.getScore());
             }
+            GetComponent<MeshRenderer>().enabled = false;
             StartCoroutine(Wait(1f));
+
             
         }
     }
