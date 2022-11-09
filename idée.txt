@@ -1,0 +1,15 @@
+faire des modele de poisson
+refactor le code
+fx sur la bombe
+faire des poisson bombe
+faire grossir les chats quand on les nourrit
+faire un swing du doigt ou mettre des bouton ou appuyer pour catapulter les objets
+ajouter des fx
+ajouter du son
+une musique ?
+finir le modele de la bombe
+faire un beau menu (juicy, reponsive)
+animer la bombe
+animer les chats
+
+
