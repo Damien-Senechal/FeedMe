@@ -69,13 +69,20 @@ public class Bomb : MonoBehaviour
     {
         if (collision.gameObject.tag == "CAT")
         {
-            Instantiate(explosion);
+            Instantiate(explosion, transform.position, Quaternion.identity);
             //Debug.Log("MES GROSSES COUILLES");
             if (manager.getScore() > PlayerPrefs.GetInt("BestScore"))
             {
                 PlayerPrefs.SetInt("BestScore", manager.getScore());
             }
-            SceneManager.LoadScene(0);
+            StartCoroutine(Wait(1f));
+            
         }
+    }
+
+    IEnumerator Wait(float t)
+    {
+        yield return new WaitForSeconds(t);
+        SceneManager.LoadScene(0);
     }
 }
