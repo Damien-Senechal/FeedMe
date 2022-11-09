@@ -60,7 +60,7 @@ public class Spawner : MonoBehaviour
                 {
                     Fish temp = Instantiate(fish,
                                             new Vector3(spawn[rand].transform.position.x,
-                                                spawn[rand].transform.position.y + .5f,
+                                                spawn[rand].transform.position.y + 1f,
                                                 spawn[rand].transform.position.z),
                                             Quaternion.identity
                                             );

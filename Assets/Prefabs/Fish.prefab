@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 2839849054458152576}
   - component: {fileID: 385854256888883918}
   - component: {fileID: 1312080809924425547}
+  - component: {fileID: 3880203614731835614}
   m_Layer: 0
   m_Name: FISH
   m_TagString: Untagged
@@ -167,6 +168,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &3880203614731835614
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5962112475424438961}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0147dd974542a3747902f5ca866d5888, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7037444510231114152
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,6 +203,7 @@ GameObject:
   - component: {fileID: 6335916538213526892}
   - component: {fileID: -3803097175700547438}
   - component: {fileID: 6146488750331027979}
+  - component: {fileID: 7388662853226681071}
   m_Layer: 6
   m_Name: Fish
   m_TagString: Untagged
@@ -303,6 +325,7 @@ MonoBehaviour:
   mr: {fileID: 1312080809924425547}
   bombMat: {fileID: 2100000, guid: cd3d09740aa1873438f1777dc605c824, type: 2}
   fishMat: {fileID: 2100000, guid: fdc810e4e66ab4040ae43545ad75b9c6, type: 2}
+  anim: {fileID: 3880203614731835614}
 --- !u!82 &6146488750331027979
 AudioSource:
   m_ObjectHideFlags: 0
@@ -399,3 +422,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!75 &7388662853226681071
+ConstantForce:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7037444510231114152}
+  m_Enabled: 1
+  m_Force: {x: 0, y: 0, z: 0}
+  m_RelativeForce: {x: 0, y: 0, z: 0}
+  m_Torque: {x: 0, y: 0, z: 0}
+  m_RelativeTorque: {x: 0, y: 0, z: 0}

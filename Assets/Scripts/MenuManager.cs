@@ -16,7 +16,7 @@ public class MenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = "Feed Me !!\r\nBest Score :\r\n" + PlayerPrefs.GetInt("BestScore", 0);
+        text.text = "BEST\r\n" + PlayerPrefs.GetInt("BestScore", 0);
     }
 
     public void Play()

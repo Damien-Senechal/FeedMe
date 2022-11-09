@@ -17,6 +17,9 @@ public class Fish : MonoBehaviour
     public Material bombMat;
     public Material fishMat;
 
+    private Vector3 torque;
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +37,11 @@ public class Fish : MonoBehaviour
 
     private void OnMouseDown()
     {
+        anim.Play("fishtouch", 0, 0.0f);
+        torque.x = Random.Range(-200, 200);
+        torque.y = Random.Range(-200, 200);
+        torque.z = Random.Range(-200, 200);
+        GetComponent<ConstantForce>().torque = torque;
         rb.AddForce(new Vector3(0, 6, 1 * speed), ForceMode.Impulse);
         spawner.isActive[spawnNumber] = false;
     }
