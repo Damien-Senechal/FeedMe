@@ -81,26 +81,30 @@ public class Fish : MonoBehaviour
     {
         if (collision.gameObject.tag == "CAT")
         {
-            int rand = Random.Range(0, 5);
-            if(rand == 0)
+            int rand2 = Random.Range(0, 100);
+            if (rand2 <= 25)
             {
-                audio.Play("meow1");
-            }
-            if (rand == 1)
-            {
-                audio.Play("meow2");
-            }
-            if (rand == 2)
-            {
-                audio.Play("meow3");
-            }
-            if (rand == 3)
-            {
-                audio.Play("meow4");
-            }
-            if (rand == 4)
-            {
-                audio.Play("meow5");
+                int rand = Random.Range(0, 5);
+                if (rand == 0)
+                {
+                    audio.Play("meow1");
+                }
+                if (rand == 1)
+                {
+                    audio.Play("meow2");
+                }
+                if (rand == 2)
+                {
+                    audio.Play("meow3");
+                }
+                if (rand == 3)
+                {
+                    audio.Play("meow4");
+                }
+                if (rand == 4)
+                {
+                    audio.Play("meow5");
+                }
             }
             manager.addTime(.5f);
             manager.addScore(1);

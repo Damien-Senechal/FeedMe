@@ -45,7 +45,7 @@ public class Spawner : MonoBehaviour
                                             );
                     temp.setSpawnNumber(rand);
                     int mat = Random.Range(0, 100);
-                    Debug.Log(mat);
+                    //Debug.Log(mat);
                     if (mat <= 15)
                     {
                         temp.changeColor("bomb");
