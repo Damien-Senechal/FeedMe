@@ -45,14 +45,14 @@ public class Spawner : MonoBehaviour
                                             );
                     temp.setSpawnNumber(rand);
                     int mat = Random.Range(0, 100);
-                    //Debug.Log(mat);
-                    if(mat <= 15)
+                    Debug.Log(mat);
+                    if (mat <= 15)
                     {
-                        temp.changeColor("fish");
+                        temp.changeColor("bomb");
                     }
                     else
                     {
-                        temp.changeColor("bomb");
+                        temp.changeColor("fish");
                     }
                     isActive[rand] = true;
                 }
@@ -68,11 +68,19 @@ public class Spawner : MonoBehaviour
                     int mat = Random.Range(0, 100);
                     if (mat <= 15)
                     {
-                        temp.changeColor("bomb");
+                        temp.changeColor("fish");
+                    }
+                    else if (mat < 30 && mat > 15)
+                    {
+                        temp.changeColor("fish2");
+                    }
+                    else if (mat < 50 && mat > 30)
+                    {
+                        temp.changeColor("fish3");
                     }
                     else
                     {
-                        temp.changeColor("fish");
+                        temp.changeColor("bomb");
                     }
                     isActive[rand] = true;
                 }

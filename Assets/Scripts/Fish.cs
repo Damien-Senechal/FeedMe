@@ -16,9 +16,12 @@ public class Fish : MonoBehaviour
 
     public Material bombMat;
     public Material fishMat;
+    public Material fishMat2;
+    public Material fishMat3;
 
     private Vector3 torque;
     public Animator anim;
+    public AudioManager audio;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +30,7 @@ public class Fish : MonoBehaviour
         spawner = FindObjectOfType<Spawner>();
         manager = FindObjectOfType<UIManager>();
         mr = GetComponent<MeshRenderer>();
+        audio = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -37,6 +41,8 @@ public class Fish : MonoBehaviour
 
     private void OnMouseDown()
     {
+        audio.Play("splash2");
+        
         anim.Play("fishtouch", 0, 0.0f);
         torque.x = Random.Range(-200, 200);
         torque.y = Random.Range(-200, 200);
@@ -61,12 +67,41 @@ public class Fish : MonoBehaviour
         {
             mr.material = bombMat;
         }
+        else if(c == "fish2")
+        {
+            mr.material = fishMat2;
+        }
+        else if(c == "fish3")
+        {
+            mr.material = fishMat3;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "CAT")
         {
+            int rand = Random.Range(0, 5);
+            if(rand == 0)
+            {
+                audio.Play("meow1");
+            }
+            if (rand == 1)
+            {
+                audio.Play("meow2");
+            }
+            if (rand == 2)
+            {
+                audio.Play("meow3");
+            }
+            if (rand == 3)
+            {
+                audio.Play("meow4");
+            }
+            if (rand == 4)
+            {
+                audio.Play("meow5");
+            }
             manager.addTime(.5f);
             manager.addScore(1);
             //Debug.Log("MES GROSSES COUILLES");

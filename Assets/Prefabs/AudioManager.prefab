@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5978177702343573375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5978177702343573345}
+  - component: {fileID: 5978177702343573374}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5978177702343573345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5978177702343573375}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 427.5953, y: 2904.552, z: -13.1715555}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5978177702343573374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5978177702343573375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1ee1593ee4bd3478a506c35006b747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: meow1
+    clip: {fileID: 8300000, guid: b7868237fa212bf48a6c9af85bc5f07f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: meow2
+    clip: {fileID: 8300000, guid: 4f6f9354da9f71f4e856ec8dd8ff9875, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: meow3
+    clip: {fileID: 8300000, guid: dbbe37cd42d5e144f80f036d902a923b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: meow4
+    clip: {fileID: 8300000, guid: 0e397f307519c8047b39051ced57b236, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: meow5
+    clip: {fileID: 8300000, guid: 52e765eb8f255be4b94b7853d807b815, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: angrymeow1
+    clip: {fileID: 8300000, guid: 90f70c9c81d979d47bac156cd05fa934, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: angrymeow2
+    clip: {fileID: 8300000, guid: 3c3472b4a81c4664687bc7ab007b068f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: eat1
+    clip: {fileID: 8300000, guid: 5842a807b0a24974f884d338a9881b51, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: eat2
+    clip: {fileID: 8300000, guid: 8e844671879c4324a89d66fc1661f5bb, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: eat3
+    clip: {fileID: 8300000, guid: 362fae05c95fde840b2f22f57126fad2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: painmeow
+    clip: {fileID: 8300000, guid: 17eb77bc6ccc9b5429ee910342e07eef, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: splash1
+    clip: {fileID: 8300000, guid: ed664608352b3af479b1ea9510252478, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: splash2
+    clip: {fileID: 8300000, guid: 8a9de18a23138a543a1a76e099b0678f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: launch
+    clip: {fileID: 8300000, guid: 7403f54bdec7a084c9cf3daee28cf3bb, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: splash4
+    clip: {fileID: 8300000, guid: aca32a8aacd564e46823f837a7bcf317, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: explosion
+    clip: {fileID: 8300000, guid: 26d2b577ff83b7947aea282893d11464, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

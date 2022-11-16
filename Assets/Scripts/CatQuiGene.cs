@@ -29,7 +29,7 @@ public class CatQuiGene : MonoBehaviour
             StartCoroutine(Movement());
         }
 
-        Debug.Log(cpt);
+        //Debug.Log(cpt);
         
     }
 
@@ -37,6 +37,15 @@ public class CatQuiGene : MonoBehaviour
     {
         GetComponent<Animator>().Play("damage");
         cpt += 1;
+        if(cpt == 5)
+        {
+            FindObjectOfType<AudioManager>().Play("angrymeow2");
+        }
+        else
+        {
+            FindObjectOfType<AudioManager>().Play("painmeow");
+        }
+        
     }
 
     IEnumerator Movement()
@@ -50,6 +59,7 @@ public class CatQuiGene : MonoBehaviour
         }
         else if (!goUp && cpt == 5)
         {
+            
             GetComponent<Button>().enabled = false;
             rect.localPosition += Vector3.down * speed * Time.deltaTime;
             yield return null;

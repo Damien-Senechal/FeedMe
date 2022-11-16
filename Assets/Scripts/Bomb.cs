@@ -21,6 +21,7 @@ public class Bomb : MonoBehaviour
 
     public Material bombMat;
     public Material fishMat;
+    public AudioManager audio;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,7 @@ public class Bomb : MonoBehaviour
         spawner = FindObjectOfType<Spawner>();
         manager = FindObjectOfType<UIManager>();
         //mr = GetComponent<MeshRenderer>();
+        audio = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -43,6 +45,7 @@ public class Bomb : MonoBehaviour
 
     private void OnMouseDown()
     {
+        audio.Play("launch");
         isActive = true;
         rb.AddForce(new Vector3(0, 5, 1 * speed), ForceMode.Impulse);
         spawner.isActive[spawnNumber] = false;
@@ -69,6 +72,7 @@ public class Bomb : MonoBehaviour
     {
         if (collision.gameObject.tag == "CAT")
         {
+            audio.Play("explosion");
             Instantiate(explosion, transform.position, Quaternion.identity);
             
             //Debug.Log("MES GROSSES COUILLES");
