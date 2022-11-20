@@ -15,7 +15,7 @@ public class CatQuiGene : MonoBehaviour
     void Start()
     {
         rect = GetComponent<RectTransform>();
-        timer = Random.Range(5, 10);
+        timer = Random.Range(10, 20);
         GetComponent<Button>().enabled = false;
     }
 
@@ -52,7 +52,7 @@ public class CatQuiGene : MonoBehaviour
     {
         if(rect.localPosition.y <= -2385 && !goUp)
         {
-            timer = Random.Range(5, 10);
+            timer = Random.Range(10, 20);
             goUp = true;
             cpt = 0;
             yield return null;
