@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class Bomb : MonoBehaviour
@@ -43,10 +44,17 @@ public class Bomb : MonoBehaviour
 
     private void OnMouseDown()
     {
-        audio.Play("launch");
-        isActive = true;
-        rb.AddForce(new Vector3(0, 5, 1 * speed), ForceMode.Impulse);
-        spawner.isActive[spawnNumber] = false;
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        else
+        {
+            audio.Play("launch");
+            isActive = true;
+            rb.AddForce(new Vector3(0, 5, 1 * speed), ForceMode.Impulse);
+            spawner.isActive[spawnNumber] = false;
+        }
     }
 
     public void setSpawnNumber(int n)

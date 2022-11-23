@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Fish : MonoBehaviour
 {
@@ -41,15 +42,22 @@ public class Fish : MonoBehaviour
 
     private void OnMouseDown()
     {
-        audio.Play("splash2");
-        
-        anim.Play("fishtouch", 0, 0.0f);
-        torque.x = Random.Range(-200, 200);
-        torque.y = Random.Range(-200, 200);
-        torque.z = Random.Range(-200, 200);
-        GetComponent<ConstantForce>().torque = torque;
-        rb.AddForce(new Vector3(0, 5, 1 * speed), ForceMode.Impulse);
-        spawner.isActive[spawnNumber] = false;
+        if(EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        else
+        {
+            audio.Play("splash2");
+
+            anim.Play("fishtouch", 0, 0.0f);
+            torque.x = Random.Range(-200, 200);
+            torque.y = Random.Range(-200, 200);
+            torque.z = Random.Range(-200, 200);
+            GetComponent<ConstantForce>().torque = torque;
+            rb.AddForce(new Vector3(0, 5, 1 * speed), ForceMode.Impulse);
+            spawner.isActive[spawnNumber] = false;
+        }
     }
 
     public void setSpawnNumber(int n)

@@ -15,7 +15,7 @@ public class CatQuiGene : MonoBehaviour
     void Start()
     {
         rect = GetComponent<RectTransform>();
-        timer = Random.Range(10, 20);
+        timer = Random.Range(3, 4);
         GetComponent<Button>().enabled = false;
     }
 
