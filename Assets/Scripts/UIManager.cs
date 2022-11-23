@@ -21,7 +21,7 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        text.text = "Score : "+score + " | " + Mathf.Round((timer * Mathf.Pow(10.0f, (float)2))) / Mathf.Pow(10.0f, (float)2);
+        text.text = "Score : "+score + " |\n " + Mathf.Round((timer * Mathf.Pow(10.0f, (float)2))) / Mathf.Pow(10.0f, (float)2);
         if (timer < 0)
         {
             if(score > PlayerPrefs.GetInt("BestScore"))
