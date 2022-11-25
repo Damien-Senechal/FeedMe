@@ -22,7 +22,7 @@ public class Fish : MonoBehaviour
 
     private Vector3 torque;
     public Animator anim;
-    public AudioManager audio;
+    public AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +31,7 @@ public class Fish : MonoBehaviour
         spawner = FindObjectOfType<Spawner>();
         manager = FindObjectOfType<UIManager>();
         mr = GetComponent<MeshRenderer>();
-        audio = FindObjectOfType<AudioManager>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -48,7 +48,7 @@ public class Fish : MonoBehaviour
         }
         else
         {
-            audio.Play("splash2");
+            audioManager.Play("splash2");
 
             anim.Play("fishtouch", 0, 0.0f);
             torque.x = Random.Range(-200, 200);
@@ -95,23 +95,23 @@ public class Fish : MonoBehaviour
                 int rand = Random.Range(0, 5);
                 if (rand == 0)
                 {
-                    audio.Play("meow1");
+                    audioManager.Play("meow1");
                 }
                 if (rand == 1)
                 {
-                    audio.Play("meow2");
+                    audioManager.Play("meow2");
                 }
                 if (rand == 2)
                 {
-                    audio.Play("meow3");
+                    audioManager.Play("meow3");
                 }
                 if (rand == 3)
                 {
-                    audio.Play("meow4");
+                    audioManager.Play("meow4");
                 }
                 if (rand == 4)
                 {
-                    audio.Play("meow5");
+                    audioManager.Play("meow5");
                 }
             }
             manager.addTime(.5f);
