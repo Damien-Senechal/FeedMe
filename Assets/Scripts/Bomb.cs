@@ -86,7 +86,7 @@ public class Bomb : MonoBehaviour
             {
                 PlayerPrefs.SetInt("BestScore", manager.getScore());
             }
-            GetComponent<MeshRenderer>().enabled = false;
+            mr.enabled = false;
             StartCoroutine(Wait(1f));
 
             
