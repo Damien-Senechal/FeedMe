@@ -116,7 +116,6 @@ public class Fish : MonoBehaviour
             }
             manager.addTime(.5f);
             manager.addScore(1);
-            //Debug.Log("MES GROSSES COUILLES");
             Destroy(gameObject);
         }
     }
